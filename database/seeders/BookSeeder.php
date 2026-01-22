@@ -1,0 +1,392 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Book;
+use App\Models\Category;
+use Illuminate\Database\Seeder;
+
+class BookSeeder extends Seeder
+{
+  /**
+   * Run the database seeds.
+   */
+  public function run(): void
+  {
+    $novel = Category::where('name', 'Novel')->first();
+    $sastra = Category::where('name', 'Sastra')->first();
+    $fiksi = Category::where('name', 'Fiksi')->first();
+    $nonFiksi = Category::where('name', 'Non-Fiksi')->first();
+    $sejarah = Category::where('name', 'Sejarah')->first();
+    $biografi = Category::where('name', 'Biografi')->first();
+    $komik = Category::where('name', 'Komik')->first();
+    $psikologi = Category::where('name', 'Psikologi')->first();
+
+    $books = [
+      [
+        'title' => 'Dilan 1990',
+        'author' => 'Pidi Baiq',
+        'publisher' => 'Pastel Books',
+        'year' => 2014,
+        'stock' => 5,
+        'category_id' => $novel->id,
+      ],
+      [
+        'title' => 'Dilan 1991',
+        'author' => 'Pidi Baiq',
+        'publisher' => 'Pastel Books',
+        'year' => 2015,
+        'stock' => 4,
+        'category_id' => $novel->id,
+      ],
+      [
+        'title' => 'Milea: Suara dari Dilan',
+        'author' => 'Pidi Baiq',
+        'publisher' => 'Pastel Books',
+        'year' => 2016,
+        'stock' => 3,
+        'category_id' => $novel->id,
+      ],
+      [
+        'title' => 'Laskar Pelangi',
+        'author' => 'Andrea Hirata',
+        'publisher' => 'Bentang Pustaka',
+        'year' => 2005,
+        'stock' => 6,
+        'category_id' => $sastra->id,
+      ],
+      [
+        'title' => 'Sang Pemimpi',
+        'author' => 'Andrea Hirata',
+        'publisher' => 'Bentang Pustaka',
+        'year' => 2006,
+        'stock' => 5,
+        'category_id' => $sastra->id,
+      ],
+      [
+        'title' => 'Edensor',
+        'author' => 'Andrea Hirata',
+        'publisher' => 'Bentang Pustaka',
+        'year' => 2007,
+        'stock' => 4,
+        'category_id' => $sastra->id,
+      ],
+      [
+        'title' => 'Bumi Manusia',
+        'author' => 'Pramoedya Ananta Toer',
+        'publisher' => 'Hasta Mitra',
+        'year' => 1980,
+        'stock' => 3,
+        'category_id' => $sastra->id,
+      ],
+      [
+        'title' => 'Anak Semua Bangsa',
+        'author' => 'Pramoedya Ananta Toer',
+        'publisher' => 'Hasta Mitra',
+        'year' => 1980,
+        'stock' => 3,
+        'category_id' => $sastra->id,
+      ],
+      [
+        'title' => 'Jejak Langkah',
+        'author' => 'Pramoedya Ananta Toer',
+        'publisher' => 'Hasta Mitra',
+        'year' => 1985,
+        'stock' => 2,
+        'category_id' => $sastra->id,
+      ],
+      [
+        'title' => 'Rumah Kaca',
+        'author' => 'Pramoedya Ananta Toer',
+        'publisher' => 'Hasta Mitra',
+        'year' => 1988,
+        'stock' => 2,
+        'category_id' => $sastra->id,
+      ],
+      [
+        'title' => 'Saman',
+        'author' => 'Ayu Utami',
+        'publisher' => 'Kalam',
+        'year' => 1998,
+        'stock' => 4,
+        'category_id' => $sastra->id,
+      ],
+      [
+        'title' => 'Larung',
+        'author' => 'Ayu Utami',
+        'publisher' => 'Kalam',
+        'year' => 2001,
+        'stock' => 3,
+        'category_id' => $sastra->id,
+      ],
+      [
+        'title' => 'Pulang',
+        'author' => 'Leila S. Chudori',
+        'publisher' => 'Kepustakaan Populer Gramedia',
+        'year' => 2012,
+        'stock' => 4,
+        'category_id' => $fiksi->id,
+      ],
+      [
+        'title' => 'Lelaki Harimau',
+        'author' => 'Eka Kurniawan',
+        'publisher' => 'Gramedia Pustaka Utama',
+        'year' => 2004,
+        'stock' => 3,
+        'category_id' => $sastra->id,
+      ],
+      [
+        'title' => 'Cantik Itu Luka',
+        'author' => 'Eka Kurniawan',
+        'publisher' => 'Gramedia Pustaka Utama',
+        'year' => 2002,
+        'stock' => 3,
+        'category_id' => $sastra->id,
+      ],
+      [
+        'title' => 'Supernova: Ksatria, Puteri, dan Bintang Jatuh',
+        'author' => 'Dee Lestari',
+        'publisher' => 'Truedee Books',
+        'year' => 2001,
+        'stock' => 5,
+        'category_id' => $fiksi->id,
+      ],
+      [
+        'title' => 'Perahu Kertas',
+        'author' => 'Dee Lestari',
+        'publisher' => 'Truedee Books',
+        'year' => 2009,
+        'stock' => 4,
+        'category_id' => $novel->id,
+      ],
+      [
+        'title' => 'Madah',
+        'author' => 'Tere Liye',
+        'publisher' => 'Gramedia Pustaka Utama',
+        'year' => 2014,
+        'stock' => 5,
+        'category_id' => $novel->id,
+      ],
+      [
+        'title' => 'Rindu',
+        'author' => 'Tere Liye',
+        'publisher' => 'Gramedia Pustaka Utama',
+        'year' => 2014,
+        'stock' => 4,
+        'category_id' => $novel->id,
+      ],
+      [
+        'title' => 'Daun Yang Jatuh Tak Pernah Membenci Angin',
+        'author' => 'Tere Liye',
+        'publisher' => 'Gramedia Pustaka Utama',
+        'year' => 2010,
+        'stock' => 6,
+        'category_id' => $novel->id,
+      ],
+      [
+        'title' => 'Garis Waktu',
+        'author' => 'Fiersa Besari',
+        'publisher' => 'Media Kita',
+        'year' => 2016,
+        'stock' => 5,
+        'category_id' => $novel->id,
+      ],
+      [
+        'title' => 'Konspirasi Alam Semesta',
+        'author' => 'Fiersa Besari',
+        'publisher' => 'Media Kita',
+        'year' => 2017,
+        'stock' => 4,
+        'category_id' => $novel->id,
+      ],
+      [
+        'title' => 'Aroma Karsa',
+        'author' => 'Dee Lestari',
+        'publisher' => 'Truedee Books',
+        'year' => 2018,
+        'stock' => 3,
+        'category_id' => $fiksi->id,
+      ],
+      [
+        'title' => 'Partikel',
+        'author' => 'Dee Lestari',
+        'publisher' => 'Truedee Books',
+        'year' => 2020,
+        'stock' => 3,
+        'category_id' => $fiksi->id,
+      ],
+      [
+        'title' => 'Matahari',
+        'author' => 'Tere Liye',
+        'publisher' => 'Gramedia Pustaka Utama',
+        'year' => 2016,
+        'stock' => 4,
+        'category_id' => $novel->id,
+      ],
+      [
+        'title' => 'Rembulan Tenggelam di Wajahmu',
+        'author' => 'Tere Liye',
+        'publisher' => 'Gramedia Pustaka Utama',
+        'year' => 2019,
+        'stock' => 4,
+        'category_id' => $novel->id,
+      ],
+      [
+        'title' => 'Seperti Dendam, Rindu Harus Dibayar Tuntas',
+        'author' => 'Eka Kurniawan',
+        'publisher' => 'Gramedia Pustaka Utama',
+        'year' => 2014,
+        'stock' => 3,
+        'category_id' => $sastra->id,
+      ],
+      [
+        'title' => 'Negeri 5 Menara',
+        'author' => 'A. Fuadi',
+        'publisher' => 'Gramedia Pustaka Utama',
+        'year' => 2009,
+        'stock' => 5,
+        'category_id' => $novel->id,
+      ],
+      [
+        'title' => 'Ranah 3 Warna',
+        'author' => 'A. Fuadi',
+        'publisher' => 'Gramedia Pustaka Utama',
+        'year' => 2011,
+        'stock' => 4,
+        'category_id' => $novel->id,
+      ],
+      [
+        'title' => 'Padang Bulan',
+        'author' => 'A. Fuadi',
+        'publisher' => 'Gramedia Pustaka Utama',
+        'year' => 2014,
+        'stock' => 3,
+        'category_id' => $novel->id,
+      ],
+      [
+        'title' => 'Nanti Kita Cerita Tentang Hari Ini',
+        'author' => 'Marchella FP',
+        'publisher' => 'Gramedia Pustaka Utama',
+        'year' => 2018,
+        'stock' => 6,
+        'category_id' => $nonFiksi->id,
+      ],
+      [
+        'title' => 'Kamu Terlalu Banyak Bercanda',
+        'author' => 'Marchella FP',
+        'publisher' => 'Gramedia Pustaka Utama',
+        'year' => 2019,
+        'stock' => 5,
+        'category_id' => $nonFiksi->id,
+      ],
+      [
+        'title' => 'Guru Aini',
+        'author' => 'Andrea Hirata',
+        'publisher' => 'Bentang Pustaka',
+        'year' => 2011,
+        'stock' => 4,
+        'category_id' => $novel->id,
+      ],
+      [
+        'title' => 'Sirkus Pohon',
+        'author' => 'Iwan Setyawan',
+        'publisher' => 'Gramedia Pustaka Utama',
+        'year' => 2013,
+        'stock' => 3,
+        'category_id' => $novel->id,
+      ],
+      [
+        'title' => '9 Summers 10 Autumns',
+        'author' => 'Iwan Setyawan',
+        'publisher' => 'Gramedia Pustaka Utama',
+        'year' => 2011,
+        'stock' => 4,
+        'category_id' => $biografi->id,
+      ],
+      [
+        'title' => 'Filosofi Teras',
+        'author' => 'Henry Manampiring',
+        'publisher' => 'BukuKita',
+        'year' => 2018,
+        'stock' => 5,
+        'category_id' => $filosofi = Category::where('name', 'Filosofi')->first()->id,
+      ],
+      [
+        'title' => 'Psikologi Positif',
+        'author' => 'Rhenald Kasali',
+        'publisher' => 'Gramedia Pustaka Utama',
+        'year' => 2005,
+        'stock' => 4,
+        'category_id' => $psikologi->id,
+      ],
+      [
+        'title' => 'Catatan Seorang Demonstran',
+        'author' => 'Soe Hok Gie',
+        'publisher' => 'Hasta Mitra',
+        'year' => 1983,
+        'stock' => 2,
+        'category_id' => $sejarah->id,
+      ],
+      [
+        'title' => 'Bumi Manusia (Edisi Tanda Jasa)',
+        'author' => 'Pramoedya Ananta Toer',
+        'publisher' => 'Hasta Mitra',
+        'year' => 2005,
+        'stock' => 2,
+        'category_id' => $sastra->id,
+      ],
+      [
+        'title' => 'Si Kabayan',
+        'author' => 'Uten Sutendy',
+        'publisher' => 'Pustaka Jaya',
+        'year' => 2010,
+        'stock' => 3,
+        'category_id' => $komik->id,
+      ],
+      [
+        'title' => 'Si Buta dari Gua Hantu',
+        'author' => 'Ganes TH',
+        'publisher' => 'M&C',
+        'year' => 2015,
+        'stock' => 2,
+        'category_id' => $komik->id,
+      ],
+      [
+        'title' => 'Pergolakan',
+        'author' => 'A. Mustofa',
+        'publisher' => 'Balai Pustaka',
+        'year' => 2017,
+        'stock' => 3,
+        'category_id' => $sastra->id,
+      ],
+      [
+        'title' => 'Siti Nurbaya',
+        'author' => 'Marah Rusli',
+        'publisher' => 'Balai Pustaka',
+        'year' => 1922,
+        'stock' => 4,
+        'category_id' => $sastra->id,
+      ],
+      [
+        'title' => 'Salam dari Ujung Dunia',
+        'author' => 'Trisno Wibowo',
+        'publisher' => 'Gramedia Pustaka Utama',
+        'year' => 2016,
+        'stock' => 3,
+        'category_id' => $novel->id,
+      ],
+      [
+        'title' => 'Antologi Cerpen Pendek',
+        'author' => 'Kompas',
+        'publisher' => 'Kompas',
+        'year' => 2018,
+        'stock' => 5,
+        'category_id' => $fiksi->id,
+      ],
+    ];
+
+    foreach ($books as $book) {
+      Book::create($book);
+    }
+  }
+}
